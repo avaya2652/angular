@@ -1,0 +1,4 @@
+<label>Enter user name:</label>
+<input type="text" name="username" [(ngModel)] = "userName" />
+<button class="btn btn-primary" (click)="updateUserName($event)" [disabled] = "!userName">Add name</button>
+<p>You have entered: {{userName}}</p>
