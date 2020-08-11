@@ -1,0 +1,9 @@
+.logCount{
+    background: blue;
+    color:white;
+}
+.log span{
+    padding:5px;
+    border:1px solid #cccccc;
+    
+}
