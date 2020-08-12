@@ -2,8 +2,14 @@
 
 <button 
     class="btn btn-primary"
-    (click)="toggleText()">Display Details</button>
-<p *ngIf="isDisplay">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit assumenda amet temporibus ut harum quibusdam autem cum dignissimos et pariatur. Id pariatur repudiandae sapiente recusandae ducimus suscipit soluta quisquam reiciendis.</p>
+    (click)="toggleText()">
+    Display Details</button>
+
+<p *ngIf="isDisplay">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+    Impedit assumenda amet temporibus ut harum quibusdam autem cum dignissimos et pariatur. 
+    Id pariatur repudiandae sapiente recusandae ducimus suscipit soluta quisquam reiciendis.
+</p>
 
 <h3>Logs:</h3>
 <p *ngFor="let i of log; let indx = index" class="log">
