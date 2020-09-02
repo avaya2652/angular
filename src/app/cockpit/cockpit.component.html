@@ -1,0 +1,25 @@
+<div class="row">
+    <div class="col-sm-12">
+        <label>Server name:</label>
+
+        <input type="text" 
+        class="from-control"
+        [(ngModel)]="serverName"
+        />
+        <label>Server Content:</label>
+
+        <input type="text" 
+        class="from-control"
+        #serverContent
+        />
+
+        <button class="btn btn-primary"
+        (click) = "addServerHandler()"
+        > Add server </button>
+        
+        <button class="btn btn-primary"
+        (click) = "addBluePrintHandler()"
+        > Add Blueprint </button>
+
+        </div>
+</div>

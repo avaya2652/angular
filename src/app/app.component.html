@@ -1,3 +1,18 @@
-<p>New app {{title}}</p>
-<hr />
-<app-servers></app-servers>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <p>New app {{title}}</p>
+            <hr />
+            <app-cockpit 
+                (addServer) = onServerAdded($event)
+                (addBluePrint) = onBlueprintAdded($event)
+            ></app-cockpit>
+            <hr />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <app-server  *ngFor="let server of servers" [server] = "server"></app-server>
+        </div>
+    </div>
+</div>

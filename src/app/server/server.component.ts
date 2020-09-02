@@ -1,9 +1,9 @@
-import {Component} from '@angular/core'
+import {Component, Input} from '@angular/core'
 @Component({
     selector: 'app-server',
     templateUrl:'./server.component.html',
     styleUrls: ['./server.component.css']
 })
 export class ServerComponent{
-
+    @Input() server:{type: string, name: string, content: string};
 }

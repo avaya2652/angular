@@ -1,1 +1,16 @@
-<h1>Server component</h1>
+<div class="row">
+    <div class="col-sm-12">
+        <div class=""[ngClass] ="{'bluePrint': server.type == 'Blueprint', 'server': server.type == 'Server'}" >
+            <div class="name">{{server.name}}</div>
+            <div class="content">{{server.content}}</div>
+        </div>
+    </div>
+</div>
+<!-- <div class="row">
+    <div class="col-sm-12">
+        <div class="bluePrint" *ngFor="let bluePrint of bluePrints">
+            <div class="name">{{bluePrint.name}}</div>
+            <div class="content">{{bluePrint.content}}</div>
+        </div>
+    </div>
+</div> -->

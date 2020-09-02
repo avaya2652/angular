@@ -1,3 +1,38 @@
 h1{
     color: darkblue;
 }
+
+.server{
+    width: 60%;
+    border: 1px solid grey;
+    margin: 20px 0px
+}
+.server .name{
+    background: #cccccc;
+    color: black;
+    padding: 10px 0px;
+    text-align: center;
+}
+.server .content{
+    color: black;
+    padding: 10px;
+    text-align: left;
+}
+.bluePrint{
+    width: 60%;
+    border: 1px solid blue;
+}
+.bluePrint .name{
+    background: #b0afeb;
+    color: black;
+    padding: 10px 0px;
+    text-align: center;
+}
+.bluePrint .content{
+    color: black;
+    padding: 10px;
+    text-align: left;
+}
+label{
+    color: red;
+}
