@@ -1,5 +1,10 @@
+<app-header (menuName)="getNavigationItemNAme($event)"></app-header>
+
 <div class="container">
-    <app-header></app-header>
-    <app-recipes></app-recipes>
-    <app-shopping-list></app-shopping-list>
+    <div class="row">
+        <div class="container">
+            <app-recipes></app-recipes>
+            <app-shopping-list></app-shopping-list>
+        </div>
+    </div>
 </div>
