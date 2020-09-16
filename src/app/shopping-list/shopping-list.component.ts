@@ -16,4 +16,14 @@ public ingredients: Ingredients[] = [
  new Ingredients('Apple', 10),
  new Ingredients('Tomato', 5)
 ];
+  /**
+   * addItemToList
+item   */
+
+  public addItemToList(item: Ingredients) {
+    console.log(item)
+    this.ingredients.push(new Ingredients(item.name, item.amount));
+
+  }
+
 }

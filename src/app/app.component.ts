@@ -6,7 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  public getNavigationItemNAme = (name) =>{
-    console.log(name);
+  public isRecepe: boolean = false
+  public getNavigationItemNAme = (name: string) =>{
+    this.isRecepe = name === 'recipe'? true: false;
+    console.log(this.isRecepe);
   }
 }

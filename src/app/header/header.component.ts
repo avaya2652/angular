@@ -1,6 +1,5 @@
 import { Component, Output, EventEmitter } from "@angular/core";
 
-@Output() menuName = new EventEmitter();
 
 @Component({
     selector: 'app-header',
@@ -10,7 +9,10 @@ import { Component, Output, EventEmitter } from "@angular/core";
 
 
 export class HeaderComponent{
-    public menuClickedHAndler = (type) =>{
+    
+    @Output() menuName = new EventEmitter<string>();
+
+    public menuClickedHAndler = (type: string) =>{
         // console.log(type);
         this.menuName.emit(type);
     }

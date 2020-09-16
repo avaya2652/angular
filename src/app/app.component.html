@@ -3,8 +3,8 @@
 <div class="container">
     <div class="row">
         <div class="container">
-            <app-recipes></app-recipes>
-            <app-shopping-list></app-shopping-list>
+            <app-recipes *ngIf = "isRecepe"></app-recipes>
+            <app-shopping-list *ngIf="!isRecepe"></app-shopping-list>
         </div>
     </div>
 </div>

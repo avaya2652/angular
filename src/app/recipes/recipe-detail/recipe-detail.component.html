@@ -1,6 +1,7 @@
+<!-- {{dtls |json}} -->
 <div class="row">
     <div class="col-xs-12">
-        <h3>Name</h3>
+        <h3>{{dtls.name}}</h3>
     </div>
 </div>
 <div class="row">
@@ -17,9 +18,16 @@
       <li><a href="#">Delete Recipe</a></li>
     </ul>
   </div> 
+  <hr />
+<div class="row">
+    <div class="col-sm-12">
+        <img [src]="dtls.imagePath" alt="dtls.name" style="width:inherit"/>
+    </div>
+</div>
+<br />
 <div class="row">
     <div class="col-xs-12">
-        <p>Description</p>
+        <p>{{dtls.description}}</p>
     </div>
 </div>
 <div class="row">
