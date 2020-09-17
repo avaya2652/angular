@@ -7,14 +7,17 @@ import { Directive, ElementRef, HostBinding, HostListener, Input, OnInit, Render
 export class BetterHighlightDirective implements OnInit{
     @Input() defaultColor: string = 'transparent';
     @Input() hoverColor: string;
+    @HostBinding('style.backgroundColor') changeColor: string = 'transparent';
+
 
     constructor(private elRef: ElementRef,private renderer:Renderer2){}
 
     ngOnInit(){
         // this.renderer.setStyle(this.elRef.nativeElement,'background-color','green');
+        this.changeColor = this.defaultColor;
+
     }
 
-    @HostBinding('style.backgroundColor') changeColor: string = 'transparent';
 
     @HostListener('mouseover') onHover(){ // onHover() will be called on 'mouseover' event, where this directive is called
         // this.renderer.setStyle(this.elRef.nativeElement,'background-color','green');

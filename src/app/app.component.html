@@ -1,6 +1,20 @@
+<div class="container">
+
+
 <p >New app {{title}}</p>
 <hr />
 <app-servers></app-servers>
 <hr />
+<div *ngFor="let no of nos">
+    <ul>
+        <li *ngIf="no %2 === 0" app-betterHighlight [defaultColor]="'grey'"  [hoverColor]="'red'" >{{no}}</li>
+    </ul>
+</div>
+<hr />
 <p app-basicHighlight>Basic highlight</p>
-<p app-betterHighlight [hoverColor]="'red'" [defaultColor]="'yellow'">Better highlight</p>
+<p app-betterHighlight 
+    [hoverColor]="'red'" 
+    [defaultColor]="'yellow'">
+Better highlight</p>
+
+</div>
