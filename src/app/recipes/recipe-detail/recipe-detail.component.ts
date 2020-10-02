@@ -1,4 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Ingredients } from '../../shared/ingredient.model';
+import { ShoppingService } from '../../shopping-list/shopping.service';
 import {Recipe} from '../recipe.model';
 
 @Component({
@@ -8,9 +10,19 @@ import {Recipe} from '../recipe.model';
 })
 export class RecipeDetailComponent implements OnInit {
   @Input() dtls: Recipe;
-  constructor() { }
+  constructor(private shoppingService: ShoppingService) { }
 
   ngOnInit(): void {
   }
 
+  // public addToShoppingList(){
+  //   console.log(this.dtls);
+  //   this.dtls.ingredients.map((ing)=>{
+  //     return this.shoppingService.AddIngredient(ing);
+  //   })
+  // }
+  
+  public addToShoppingList(){
+    this.shoppingService.AddIngredients(this.dtls.ingredients);
+  }
 }
