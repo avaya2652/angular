@@ -1,0 +1,70 @@
+<p>recipe-edit works!</p>
+<div class="row">
+  <div class="com-sm-12">
+    <form [formGroup]="recipeForm" (ngSubmit)="onRecipeSubmit()">
+      <div class="row">
+        <div class="col-sm-12">
+          <button type="submit" class="btn btn-primary" [disabled]="recipeForm.invalid">Submit</button>
+          <button type="button" class="btn btn-danger" (click)="onCancelHandler()">Cancel</button>
+        </div>
+        <div class="col-sm-12">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" formControlName="name" id="name" class="form-control" />
+          </div>
+        </div>
+        <div class="col-sm-12">
+          <div class="form-group">
+            <label for="desc">Description</label>
+            <textarea formControlName="description" id="desc" class="form-control"></textarea>
+          </div>
+        </div>
+        <div class="col-sm-12">
+          <div class="form-group">
+            <label for="image-path">Image Path</label>
+            <input type="text" formControlName="imagePath" id="image-path" class="form-control" #imagePath/>
+              <!-- <img [src]="recipeForm.get('imagePath').value" alt="image preview" />  -->
+              <!-- <img [src]="imagePath.value" alt="image preview" class="img-responsive"/>  -->
+
+          </div>
+        </div>
+        <div class="col-sm-12">
+          <div class="form-group">
+            <img src="" class="image-responsive" />
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12" formArrayName="ingredients">
+          <div class="row">
+            <div class="col-sm-12">
+              <label for="heading">Ingredients:</label>
+            </div>
+
+          </div>
+          <div class="row" *ngFor="let ingredientCtrl of recipeForm.get('ingredients')['controls']; let i = index"
+            [formGroupName]="i">
+            <div class="col-sm-8 col-md-8 col-lg-8">
+              <input type="text" formControlName="ingname" id="ingName" class="form-control" />
+            </div>
+            <div class="col-sm-3 col-md-3 col-lg-3">
+              <input type="number" formControlName="amount" id="amount" class="form-control" />
+
+            </div>
+            <div class="col-sm-1 col-md-1 col-lg-1">
+              <button type="button" class="btn btn-danger" (click)="onDeleteIngredientHandler(i)">X</button>
+
+            </div>
+          </div>
+          <hr />
+          <div class="row">
+            <div class="col-xs-12">
+              <button type="button"
+              (click)="addIngredients()" class="btn btn-success">Add Ingredients</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

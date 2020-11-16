@@ -3,9 +3,10 @@
         <app-recipe-list></app-recipe-list>
     </div>
     <div class="col-md-7">
-        <app-recipe-detail *ngIf="recipeDetails; else nodata"
+        <!-- <app-recipe-detail *ngIf="recipeDetails; else nodata"
         [dtls] = "recipeDetails">
-    </app-recipe-detail>
+    </app-recipe-detail> -->
+    <router-outlet></router-outlet>
         <ng-template #nodata>
             No recipe found!
         </ng-template>

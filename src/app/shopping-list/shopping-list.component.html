@@ -6,8 +6,8 @@
 
         <hr />
         <p>Shopping List here..</p>
-        <ul class="list-group" *ngFor="let ing of ingredients">
-            <li class="list-group-item" >
+        <ul class="list-group" *ngFor="let ing of ingredients; let i=index;">
+            <li class="list-group-item" (click)="onEditItem(i)">
                <a style="cursor: pointer"> {{ing.name}} ({{ing.amount}})</a>
             </li>
         </ul> 
